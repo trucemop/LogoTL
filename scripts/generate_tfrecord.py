@@ -15,9 +15,10 @@ from __future__ import absolute_import
 import os
 import io
 import pandas as pd
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import sys
-sys.path.append("/home/cdsw/tensorflow/models/research")
+sys.path.append("/tensorflow/models/research")
 
 from PIL import Image
 from object_detection.utils import dataset_util

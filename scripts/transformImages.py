@@ -176,7 +176,7 @@ def main(_):
                                                            
     print('Processed {line_count} images in CVS file: ' + label_file)  
   
-    print('Successfully created the Output CSV Label File:{}'.format(output_path))
+    print('Successfully created the Output CSV Label File:{}'.format(FLAGS.output_path))
 
 #=============  End of Method - Main ==============================
 
