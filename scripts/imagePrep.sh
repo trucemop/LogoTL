@@ -11,7 +11,7 @@ mkdir -p ./Images/train/DA
 echo '####### Convert XML Labels to CSV #######'
 
 # From Home Directory
-cd
+
 python ./scripts/xml_to_csv.py -i ./Images/train -o ./annotations/train_labels.csv
 python ./scripts/xml_to_csv.py -i ./Images/test -o ./annotations/test_labels.csv
 
@@ -41,8 +41,6 @@ python3 ./scripts/transformImages.py \
 ##Convert CSV to TF-Record
 echo '####### Convert CSV to TF-Record #######'
 
-# From Home Directory
-cd
 
 #Post Data Augmentation - Training Set
 python3 ./scripts/generate_tfrecord.py \
