@@ -21,8 +21,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
 import csv
-#import tensorflow as tf
-import tensorflow.compat.v1 as tf
+import tensorflow as tf
 
 from data_aug.data_aug import *
 from data_aug.bbox_util import *

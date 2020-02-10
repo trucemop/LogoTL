@@ -44,8 +44,7 @@ Example usage:
 import functools
 import json
 import os
-#import tensorflow as tfa
-import tensorflow.compat.v1 as tf
+import tensorflow as tfa
 import sys
 sys.path.append("/home/cdsw/tensorflow/models/research/object_detection")
 
