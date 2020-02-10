@@ -29,7 +29,7 @@ unzip protobuf.zip && \
 cd /tensorflow/models/research/ && \
 ./bin/protoc object_detection/protos/*.proto --python_out=.
 
-ENV PYTHONPATH /tensorflow/models/research:/tensorflow/models/research/slim:/tensorflow/models/research/object_detection
+ENV PYTHONPATH /tensorflow/models/research:/tensorflow/models/research/slim:/tensorflow/models/research/object_detection:/opt
 
-RUN cd / && \
+RUN cd /opt && \
 git clone https://github.com/Paperspace/DataAugmentationForObjectDetection.git
