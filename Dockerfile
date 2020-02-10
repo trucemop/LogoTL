@@ -1,7 +1,8 @@
-FROM tensorflow/tensorflow:latest-devel-gpu-py3
+FROM tensorflow/tensorflow:1.15.2-gpu-py3
 
-RUN pip3 install tensorflow cython pillow lxml jupyter matplotlib opencv-python
-RUN pip install tensorflow
+RUN apt-get install -y git wget unzip libsm6 libxext6 libxrender-dev
+RUN pip3 install tensorflow==1.15.2 cython pillow lxml jupyter matplotlib opencv-python pandas
+RUN pip install tensorflow==1.15.2 pandas
 
 RUN mkdir tensorflow && \
 cd tensorflow && \
