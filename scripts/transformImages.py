@@ -23,8 +23,8 @@ import matplotlib
 import csv
 import tensorflow as tf
 
-from DataAugmentationForObjectDetection.data_aug.data_aug import *
-from DataAugmentationForObjectDetection.data_aug.bbox_util import *
+from data_aug.data_aug import *
+from data_aug.bbox_util import *
 import cv2 
 import pickle as pkl
 
