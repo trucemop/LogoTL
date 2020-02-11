@@ -1,11 +1,11 @@
-FROM tensorflow/tensorflow:1.15.2-gpu-py3
+FROM tensorflow/tensorflow:1.15.2-gpu-py3-jupyter
 
 RUN apt-get install -y git wget unzip libsm6 libxext6 libxrender-dev
-RUN pip3 install tensorflow==1.15.2 cython pillow lxml jupyter matplotlib opencv-python pandas
-RUN pip install tensorflow==1.15.2 pandas
+RUN pip3 install cython pillow lxml matplotlib opencv-python pandas
+RUN pip install pandas
 
-RUN mkdir tensorflow && \
-cd tensorflow && \
+RUN mkdir /tensorflow && \
+cd /tensorflow && \
 git clone https://github.com/tensorflow/models.git && \
 cd models/research && \
 python setup.py build && \
