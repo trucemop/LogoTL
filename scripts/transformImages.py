@@ -35,9 +35,7 @@ flags.DEFINE_string('img_input_dir', 'Images/train/', 'Path to image director')
 flags.DEFINE_string('image_label_file', 'annotations/train_labels.csv', 'Path to the image label CSV file')
 flags.DEFINE_string('numIters', '100', 'Number of iterations for each image')
 flags.DEFINE_string('output_path', 'annotations/train_labels_DA.csv', 'Path to output image label CSV file')
-flags.DEFINE_string('label0', 'Cloudera', 'Name of class[0] label')
-flags.DEFINE_string('label1', 'Hortonworks', 'Name of class[1] label')
-flags.DEFINE_string('label2', 'ClouderaOrange', 'Name of class[2] label')
+flags.DEFINE_string('label0', 'b52', 'Name of class[0] label')
                               
 FLAGS = flags.FLAGS
 #"""
@@ -104,8 +102,6 @@ def main(_):
   label_file= FLAGS.image_label_file        # default value = annotations/train_labels.csv
   DA_label_file = FLAGS.output_path         # default value = annotations/train_labels_DA.csv
   class_name0= FLAGS.label0                 # default value = Cloudera
-  class_name1= FLAGS.label1                 # default value = Hortonworks
-  class_name2= FLAGS.label2                 # default value = ClouderaOrange
   
   #Open CSV Label File
   with open(label_file) as csv_file:
