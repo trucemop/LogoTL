@@ -24,9 +24,7 @@ python3 ./scripts/transformImages.py \
     --numIters=100 \
     --image_label_file=./annotations/train_labels.csv \
     --output_path=./annotations/train_labels_DA.csv \
-    --label0=Cloudera \
-    --label1=Hortonworks \
-    --label2=ClouderaOrange
+    --label0=b52
 
 #Test Set
 python3 ./scripts/transformImages.py \
@@ -34,9 +32,7 @@ python3 ./scripts/transformImages.py \
     --numIters=100 \
     --image_label_file=./annotations/test_labels.csv \
     --output_path=./annotations/test_labels_DA.csv \
-    --label0=Cloudera \
-    --label1=Hortonworks \
-    --label2=ClouderaOrange
+    --label0=b52
 
 ##Convert CSV to TF-Record
 echo '####### Convert CSV to TF-Record #######'
@@ -47,15 +43,11 @@ python3 ./scripts/generate_tfrecord.py \
 --csv_input=./annotations/train_labels_DA.csv \
 --img_path=./Images/train/DA  \
 --output_path=./annotations/train_DA.record \
---label0=Cloudera \
---label1=Hortonworks \
---label2=ClouderaOrange 
+--label0=b52
 
 #Post Data Augmentation - Test Set
 python3 ./scripts/generate_tfrecord.py \
 --csv_input=./annotations/test_labels_DA.csv \
 --img_path=./Images/test/DA  \
 --output_path=./annotations/test_DA.record \
---label0=Cloudera \
---label1=Hortonworks \
---label2=ClouderaOrange
+--label0=b52
